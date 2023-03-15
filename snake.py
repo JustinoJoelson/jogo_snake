@@ -1,6 +1,9 @@
 import pygame, random
 from pygame.locals import *
 
+pygame.font.init()
+
+
 def on_grid_random():
     x = random.randint(0,590)
     y = random.randint(0,590)
