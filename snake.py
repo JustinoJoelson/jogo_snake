@@ -45,15 +45,15 @@ game_over = False
     
 while True:
     clock.tick(10)
-    for event in pygame.event.get():
-        if event.type == QUIT:
-            pygame.quit()
     
     if snake[0][0] < 0 or snake[0][0] == 590 or snake[0][1] < 0 or snake[0][1] == 590:
         game_over = True
         pygame.quit()
     
 
+    for event in pygame.event.get():
+        if event.type == QUIT:
+            pygame.quit()
         if event.type == KEYDOWN:
             if event.key == K_UP:
                 my_direction = UP
